@@ -115,7 +115,39 @@ h1 {
     animation: slideDownFade .5s .5s forwards;
 }
 
+.overlay:target .next,
+.overlay:target .prev   {
+    animation: fade .5s .5s forwards;
+}
+
+/* navigasi */
+.next, .prev   {
+    width: 80px;
+    height: 80px;
+    background-image: url(../img/next.png);
+    position: absolute;
+    text-indent: -9999px;
+    top: 40%;
+    margin-left: 50px;
+    opacity: 0;
+}
+
+.prev   {
+    background-image: url(../img/prev.png);
+    top: 40%;
+    margin-left: -130px;
+}
+
 /* animasi */
+@keyframes fade {
+    0%  {
+        opacity: 0;
+    }
+    100%    {
+        opacity: 1;
+    }
+}
+
 @keyframes zoomAndFade  {
     0%  {
         transform: scale(0);
